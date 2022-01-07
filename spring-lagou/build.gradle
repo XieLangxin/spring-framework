@@ -13,7 +13,8 @@ dependencies {
     implementation 'org.projectlombok:lombok:1.18.20'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-    implementation(project(":spring-context"),project(":spring-instrument"))
+    implementation(project(":spring-context"),project(":spring-instrument"),project(":spring-aop"))
+    implementation group:'org.aspectj', name: 'aspectjweaver', version: '1.8.6'
 }
 
 test {
