@@ -13,9 +13,9 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class TransactionUtil {
 	@Pointcut("execution(public void com.lagou.service.impl.MyServiceImpl.printHelloWorld())")
-	public void pt1(){}
-	
-	@Before("pt1")
+	public void pt2(){}
+
+	@Before("pt2()")
 	public void before(){
 		System.out.println("事务开始");
 	}
