@@ -808,6 +808,7 @@ public class PathMatchingResourcePatternResolver implements ResourcePatternResol
 					doRetrieveMatchingFiles(fullPattern, content, result);
 				}
 			}
+			//判断文件格式
 			if (getPathMatcher().match(fullPattern, currPath)) {
 				result.add(content);
 			}
