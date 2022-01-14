@@ -777,6 +777,7 @@ public class PathMatchingResourcePatternResolver implements ResourcePatternResol
 		}
 		fullPattern = fullPattern + StringUtils.replace(pattern, File.separator, "/");
 		Set<File> result = new LinkedHashSet<>(8);
+		//获取所有文件
 		doRetrieveMatchingFiles(fullPattern, rootDir, result);
 		return result;
 	}

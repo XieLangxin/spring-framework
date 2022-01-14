@@ -7,5 +7,6 @@ import org.springframework.stereotype.Service;
  * @date 2022/1/11
  */
 @Service
-public class MyService {
+public interface MyService {
+	void printHelloWorld();
 }
