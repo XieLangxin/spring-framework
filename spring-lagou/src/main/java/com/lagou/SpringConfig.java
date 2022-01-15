@@ -19,15 +19,15 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy
 @Configuration
 public class SpringConfig {
-	@Autowired
-	MyService myService;
+//	@Autowired
+//	MyService myService;
 
 	@Bean
 	public Company company(){
 		Company company = new Company();
 		company.setId(1);
 		company.setName("lagou");
-		System.out.println(myService);
+//		System.out.println(myService);
 		return company;
 	}
 

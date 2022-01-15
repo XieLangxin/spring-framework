@@ -288,6 +288,7 @@ public class ClassPathBeanDefinitionScanner extends ClassPathScanningCandidateCo
 					definitionHolder =
 							AnnotationConfigUtils.applyScopedProxyMode(scopeMetadata, definitionHolder, this.registry);
 					beanDefinitions.add(definitionHolder);
+					//实际加入Bean定义
 					registerBeanDefinition(definitionHolder, this.registry);
 				}
 			}
