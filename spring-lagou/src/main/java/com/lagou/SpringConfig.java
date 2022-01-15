@@ -1,8 +1,11 @@
 package com.lagou;
 
 import com.lagou.pojo.Company;
+import com.lagou.service.MyService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -16,13 +19,17 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy
 @Configuration
 public class SpringConfig {
-	//@Bean
-	//public Company company(){
-	//	Company company = new Company();
-	//	company.setId(1);
-	//	company.setName("lagou");
-	//	return company;
-	//}
+	@Autowired
+	MyService myService;
+
+	@Bean
+	public Company company(){
+		Company company = new Company();
+		company.setId(1);
+		company.setName("lagou");
+		System.out.println(myService);
+		return company;
+	}
 
 	//@Bean
 	//public BeanPostProcessor beanPostProcessor(){
