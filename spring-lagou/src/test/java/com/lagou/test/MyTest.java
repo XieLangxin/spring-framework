@@ -34,6 +34,6 @@ public class MyTest {
 	public void transactionTest(){
 		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringConfig.class);
 		MyService bean = applicationContext.getBean(MyService.class);
-		bean.printHelloWorld();
+//		bean.printHelloWorld();
 	}
 }
